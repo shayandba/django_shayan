@@ -1,0 +1,26 @@
+{% extends 'pp53/base.html' %}
+
+{% block title %}Exercici 2 - Logs{% endblock %}
+
+{% block content %}
+<h2>Exercici 2: Logs amb diferents nivells</h2>
+
+<div class="form-box">
+    <p>Selecciona el nivell de log:</p>
+    <form method="get">
+        <select name="nivell">
+            <option value="1" {% if nivell == 1 %}selected{% endif %}>1 - Només ERROR</option>
+            <option value="2" {% if nivell == 2 %}selected{% endif %}>2 - WARNING i ERROR</option>
+            <option value="3" {% if nivell == 3 %}selected{% endif %}>3 - INFO, WARNING i ERROR</option>
+        </select>
+        <br>
+        <button type="submit">Mostrar logs</button>
+    </form>
+</div>
+
+<div class="log-box">
+    {% for missatge in missatges %}
+        <p class="{{ missatge.tipus }}">[{{ missatge.tipus|upper }}] {{ missatge.text }}</p>
+    {% endfor %}
+</div>
+{% endblock %}

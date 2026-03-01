@@ -1,0 +1,16 @@
+{% extends 'pp53/base.html' %}
+
+{% block title %}Exercici 3 - Array Multidimensional{% endblock %}
+
+{% block content %}
+<h2>Exercici 3: Array Multidimensional (Sèrie Naruto)</h2>
+
+{% for arc in naruto %}
+<div class="pelicula">
+    <h3>{{ arc.Arc }}</h3>
+    <p><strong>Protagonista:</strong> {{ arc.Protagonista }}</p>
+    <p><strong>Antagonista:</strong> {{ arc.Antagonista }}</p>
+    <p><strong>Altres Personatges:</strong> {{ arc.Altres_Personatges|join:", " }}</p>
+</div>
+{% endfor %}
+{% endblock %}

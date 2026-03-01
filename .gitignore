@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+db.sqlite3
+*.log
+
+# Fitxers originals / temporals
+pp53_extracted/
+*.zip
+Ra7_2_*.pdf
+
+# Entorns virtuals
+venv/
+env/
+.env

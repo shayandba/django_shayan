@@ -1,0 +1,28 @@
+{% extends 'pp53/base.html' %}
+
+{% block title %}Exercici 1 - Decimal a Binari{% endblock %}
+
+{% block content %}
+<h2>Exercici 1: Conversió Decimal a Binari</h2>
+
+<div class="form-box">
+    <p>Introdueix un número decimal per convertir-lo a binari:</p>
+    <form method="get">
+        <input type="number" name="numero" value="{{ numero }}" min="0" placeholder="Exemple: 103704">
+        <br>
+        <button type="submit">Convertir</button>
+    </form>
+</div>
+
+{% if resultat is not None %}
+<div class="resultat">
+    El número decimal <strong>{{ numero }}</strong> en binari és: <strong>{{ resultat }}</strong>
+</div>
+{% endif %}
+
+<hr>
+
+<div style="text-align:center; color:#555;">
+    <p><em>Valor per defecte de l'exercici original: 24 &times; 4321 = <strong>103704</strong></em></p>
+</div>
+{% endblock %}

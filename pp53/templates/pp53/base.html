@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pp5.3 - Shayan Ali Kousar{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #004080;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0 40px 0;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #002a80;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 1px solid #ccc;
+        }
+
+        .info {
+            color: green;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .pelicula {
+            background-color: #e7f0ff;
+            border: 1px solid #a9c7ff;
+            padding: 15px;
+            margin: 15px auto;
+            width: 60%;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .pelicula h3 {
+            color: #002a80;
+            margin-bottom: 10px;
+        }
+
+        .form-box {
+            background-color: #e7f0ff;
+            border: 1px solid #a9c7ff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 40%;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .form-box input[type="number"], .form-box select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #a9c7ff;
+            margin: 10px 0;
+        }
+
+        .form-box button {
+            padding: 10px 25px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-box button:hover {
+            background-color: #002a80;
+        }
+
+        .resultat {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 10px;
+            width: 40%;
+        }
+
+        .log-box {
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pp5.3 - Shayan Ali Kousar</h1>
+
+<nav>
+    <a href="{% url 'index' %}">Inici</a>
+    <a href="{% url 'exercici1' %}">Exercici 1 - Decimal a Binari</a>
+    <a href="{% url 'exercici2' %}">Exercici 2 - Logs</a>
+    <a href="{% url 'exercici3' %}">Exercici 3 - Array Multidimensional</a>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer>
+    <p>Shayan Ali Kousar &mdash; Pp5.3 amb Django</p>
+</footer>
+
+</body>
+</html>

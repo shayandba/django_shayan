@@ -1,0 +1,34 @@
+{% extends 'pp53/base.html' %}
+
+{% block title %}Inici - Pp5.3 Shayan Ali Kousar{% endblock %}
+
+{% block content %}
+<h2>Benvingut al lloc web Pp5.3</h2>
+
+<div style="text-align:center; max-width:700px; margin: 30px auto;">
+    <p style="font-size:1.1em;">
+        Aquest lloc web implementa els tres exercicis del <strong>Pp5.3</strong> en Django.
+        Fes clic a un dels exercicis del menú per explorar-los.
+    </p>
+
+    <hr>
+
+    <div class="pelicula" style="width:80%;">
+        <h3>Exercici 1 &mdash; Conversió Decimal a Binari</h3>
+        <p>Introdueix un número decimal i veuràs la seva representació en binari.</p>
+        <a href="{% url 'exercici1' %}" style="color:#004080; font-weight:bold;">Anar a l'exercici 1 &rarr;</a>
+    </div>
+
+    <div class="pelicula" style="width:80%;">
+        <h3>Exercici 2 &mdash; Logs amb nivells</h3>
+        <p>Sistema de logs amb tres nivells: INFO, WARNING i ERROR. Tria el nivell i veuràs els missatges corresponents.</p>
+        <a href="{% url 'exercici2' %}" style="color:#004080; font-weight:bold;">Anar a l'exercici 2 &rarr;</a>
+    </div>
+
+    <div class="pelicula" style="width:80%;">
+        <h3>Exercici 3 &mdash; Array Multidimensional (Naruto)</h3>
+        <p>Visualització d'un array multidimensional amb els arcs de la sèrie Naruto.</p>
+        <a href="{% url 'exercici3' %}" style="color:#004080; font-weight:bold;">Anar a l'exercici 3 &rarr;</a>
+    </div>
+</div>
+{% endblock %}
